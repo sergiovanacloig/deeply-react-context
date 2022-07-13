@@ -14,7 +14,7 @@ function App() {
         <List />
         <Search />
       </SearchProvider>
-      <span className="help-message">Open the browser console to see the magic &#9889;</span>
+      <span className="help-message">Open the browser console to see the magic ⚡</span>
     </div>
   );
 }
