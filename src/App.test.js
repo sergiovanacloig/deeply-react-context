@@ -17,6 +17,8 @@ describe("<App />", () => {
     expect(console.log).toHaveBeenCalledWith("RENDER LIST");
     expect(screen.getByText("Search value: Default text")).toBeVisible();
     expect(console.log).toHaveBeenCalledWith("RENDER SEARCH");
+    expect(screen.getByText("Counter value: 0")).toBeVisible();
+    expect(console.log).toHaveBeenCalledWith("RENDER COUNTER");
     expect(
       screen.getByText("Open the browser console to see the magic ⚡")
     ).toBeVisible();
@@ -30,13 +32,15 @@ describe("<App />", () => {
     expect(console.log).toHaveBeenNthCalledWith(1, "RENDER HEADER");
     expect(console.log).toHaveBeenNthCalledWith(2, "RENDER LIST");
     expect(console.log).toHaveBeenNthCalledWith(3, "RENDER SEARCH");
-    expect(console.log).toHaveBeenCalledTimes(3);
+    expect(console.log).toHaveBeenNthCalledWith(4, "RENDER COUNTER");
+    expect(console.log).toHaveBeenCalledTimes(4);
 
     userEvent.type(input, "H");
 
-    expect(console.log).toHaveBeenNthCalledWith(4, "RENDER HEADER");
-    expect(console.log).not.toHaveBeenNthCalledWith(5, "RENDER LIST");
-    expect(console.log).toHaveBeenNthCalledWith(5, "RENDER SEARCH");
-    expect(console.log).toHaveBeenCalledTimes(5);
+    expect(console.log).toHaveBeenNthCalledWith(5, "RENDER HEADER");
+    expect(console.log).not.toHaveBeenNthCalledWith(6, "RENDER LIST");
+    expect(console.log).toHaveBeenNthCalledWith(6, "RENDER SEARCH");
+    expect(console.log).toHaveBeenNthCalledWith(7, "RENDER COUNTER");
+    expect(console.log).toHaveBeenCalledTimes(7);
   });
 });

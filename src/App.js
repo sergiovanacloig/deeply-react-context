@@ -5,6 +5,7 @@ import SearchProvider from "./context/Search/SearchProvider";
 import Header from "./components/Header";
 import List from "./components/List";
 import Search from "./components/Search";
+import Counter from "./components/Counter";
 
 function App() {
   return (
@@ -13,8 +14,11 @@ function App() {
         <Header />
         <List />
         <Search />
+        <Counter />
       </SearchProvider>
-      <span className="help-message">Open the browser console to see the magic ⚡</span>
+      <span className="help-message">
+        Open the browser console to see the magic ⚡
+      </span>
     </div>
   );
 }

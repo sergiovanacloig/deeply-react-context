@@ -1,4 +1,6 @@
 .App {
+  height: 100vh;
+  justify-content: space-around;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -6,10 +8,15 @@
 
 .wrapper {
   border: 1px solid orange;
-  margin: 100px;
+  margin: 0 100px;
   padding: 20px;
 }
 
 .help-message {
   color: grey;
+  justify-self: flex-end;
+}
+
+.button {
+  margin-left: 50px;
 }
