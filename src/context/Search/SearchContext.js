@@ -1,7 +1,6 @@
 import { createContext } from "react";
 
 const SearchContext = createContext(undefined);
-SearchContext.displayName = SearchContext;
+SearchContext.displayName = "SearchContext";
 
 export default SearchContext;
-
