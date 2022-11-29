@@ -1,20 +1,25 @@
 .App {
   height: 100vh;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
   display: flex;
   flex-direction: column;
+  padding: 0 100px;
 }
 
+.initialApp {
+  justify-content: space-around;
+}
+
+
 .wrapper {
-  border: 1px solid orange;
-  margin: 0 100px;
+  border: 1px solid grey;
+  border-radius: 4px;
   padding: 20px;
 }
 
-.help-message {
-  color: grey;
-  justify-self: flex-end;
+footer {
+  margin-bottom: 20px;
 }
 
 .button {
@@ -22,9 +27,21 @@
 }
 
 ul {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid grey;
+  border-radius: 4px;
+  text-decoration: none;
   list-style: none;
+  padding: 20px;
 }
 
 a {
+  text-decoration: none;
   color: white;
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }

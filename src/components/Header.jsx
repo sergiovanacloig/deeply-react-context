@@ -4,6 +4,7 @@ const Header = () => {
   const { setSearch, increase } = useSearch();
 
   console.log("RENDER HEADER");
+
   return (
     <section className="wrapper">
       <header>HEADER</header>
