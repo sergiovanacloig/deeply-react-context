@@ -1,7 +1,7 @@
 import useSearch from "../context/Search/useSearch";
 
 const Header = () => {
-  const { setSearch, increase } = useSearch();
+  const { search, setSearch, increase } = useSearch();
 
   console.log("RENDER HEADER");
 
@@ -11,6 +11,7 @@ const Header = () => {
       <input
         type="text"
         placeholder="Type something..."
+        value={search}
         onChange={(ev) => setSearch(ev.target.value)}
       />
       <button className="button" type="button" onClick={increase}>

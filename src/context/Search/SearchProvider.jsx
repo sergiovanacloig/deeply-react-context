@@ -2,7 +2,7 @@ import { useState } from "react";
 import SearchContext from "./SearchContext";
 
 const SearchProvider = (props) => {
-  const [search, setSearch] = useState('Default text');
+  const [search, setSearch] = useState('');
   const [counter, setCounter] = useState(0);
 
   const increase = () => {

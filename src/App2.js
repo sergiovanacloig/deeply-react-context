@@ -1,25 +1,22 @@
-import "./App.css";
-
-import SearchProvider from "./context/Search/SearchProvider";
-
-import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import List from "./components/List";
 import Search from "./components/Search";
 import Counter from "./components/Counter";
-import { Routes, Route } from "react-router-dom";
+
+import SearchProvider from "./context/Search/SearchProvider";
+
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
+    <div className="App initialApp">
       <SearchProvider>
-        <Routes>
-          <Route exact path="/" element={<Header />} />
-          <Route exact path="/list" element={<List />} />
-          <Route exact path="/search" element={<Search />} />
-          <Route exact path="/counter" element={<Counter />} />
-        </Routes>
+        <Header />
+        <List />
+        <Search />
+      </SearchProvider>
+      <SearchProvider>
+        <Counter />
       </SearchProvider>
       <footer>
         <span>Open the browser console to see the magic ⚡</span>

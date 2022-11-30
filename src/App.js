@@ -16,9 +16,9 @@ function App() {
         <Search />
         <Counter />
       </SearchProvider>
-      <span className="help-message">
-        Open browser console to see the magic ⚡
-      </span>
+      <footer>
+        <span>Open the browser console to see the magic ⚡</span>
+      </footer>
     </div>
   );
 }

@@ -13,39 +13,17 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Routes>
-        <Route
-          exact
-          path="/"
-          element={
-            <SearchProvider>
-              <Header />
-            </SearchProvider>
-          }
-        />
-        <Route exact path="/list" element={<List />} />
-        <Route
-          exact
-          path="/search"
-          element={
-            <SearchProvider>
-              <Search />
-            </SearchProvider>
-          }
-        />
-        <Route
-          exact
-          path="/counter"
-          element={
-            <SearchProvider>
-              <Counter />
-            </SearchProvider>
-          }
-        />
-      </Routes>
-      <span className="help-message">
-        Open the browser console to see the magic ⚡
-      </span>
+      <SearchProvider>
+        <Routes>
+          <Route exact path="/" element={<Header />} />
+          <Route exact path="/list" element={<List />} />
+          <Route exact path="/search" element={<Search />} />
+          <Route exact path="/counter" element={<Counter />} />
+        </Routes>
+      </SearchProvider>
+      <footer>
+        <span>Open the browser console to see the magic ⚡</span>
+      </footer>
     </div>
   );
 }

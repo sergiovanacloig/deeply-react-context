@@ -18,17 +18,25 @@ function App() {
           exact
           path="/"
           element={
-            <SearchProvider>
+            <SearchProvider key="list">
               <Header />
             </SearchProvider>
           }
         />
-        <Route exact path="/list" element={<List />} />
+        <Route
+          exact
+          path="/list"
+          element={
+            <SearchProvider key="list">
+              <List />
+            </SearchProvider>
+          }
+        />
         <Route
           exact
           path="/search"
           element={
-            <SearchProvider>
+            <SearchProvider key="list">
               <Search />
             </SearchProvider>
           }
@@ -37,7 +45,7 @@ function App() {
           exact
           path="/counter"
           element={
-            <SearchProvider>
+            <SearchProvider key="counter">
               <Counter />
             </SearchProvider>
           }
